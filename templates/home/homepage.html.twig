@@ -3,8 +3,8 @@
 {% block title %}Portfolio - Acceuil{% endblock %}
 
 {% block stylesheets %}
-<!-- Renders a link tag (if your module requires any CSS) -->
-<link rel="stylesheet" href="asset/css/homepageStyle.css"> 
+{{ parent() }}
+{{ encore_entry_link_tags('homepage') }}
 {% endblock %}
 
 {% block body %}
