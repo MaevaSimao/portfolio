@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-}
+
     {% block stylesheets %}
         {# 'app' must match the first argument to addEntry() in webpack.config.js #}
         {{ encore_entry_link_tags('app') }}
-    
     {% endblock %}
 
     
@@ -22,8 +21,12 @@
 </head>
 
 <body>
+    
 
-    {% include "_header.html.twig" %}
+    <div class="container-fluid"></div>           
+    {% include "_header.html.twig" %}    
+    
+  
     {% block body %}
 
     {% endblock %}
@@ -45,6 +48,9 @@
                 <script src="/build/runtime.js"></script>
                 <script src="/build/app.js"></script> -->
     {% endblock %}
+
+    
+    </div>
 </body>
 
 </html>

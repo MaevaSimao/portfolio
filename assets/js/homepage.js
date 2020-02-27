@@ -1,2 +1,2 @@
 
-import '../css/homepage.css';
+import '../css/homepage.scss';
