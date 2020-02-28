@@ -1,16 +1,36 @@
-body  {
-    background-image: url("../image/notebook.jpg");
 
-}
+$break-extraLarge : 1200px; 
+
+
+.backgound-container  {
+    background-image: url("../image/typewriter.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0; 
+    height: 100vh; 
+   
+    }
 
 .title-homepage {
-    height: 100vh;
-    width: 30vw;
+
+    margin: auto; 
     color: white;
+    text-align: center; 
+    font-weight: bold;
+    margin: 2em 50vw;
+   
 
    h1 {  
-    text-align: center; 
-    font-size: 7em;
+   
+        font-size: 6em;
+      
     }
 }
 
+@media screen and (min-width: $break-extraLarge) {
+    .backgound-container  {
+     background-image: url("../image/notebook.jpg");
+     background-size: cover;
+    
+     }
+}
