@@ -1,36 +1,25 @@
 
-$break-extraLarge : 1200px; 
 
+ .navbar-custum {
+    margin-bottom: 100em;
+}  
 
-.backgound-container  {
-    background-image: url("../image/typewriter.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0; 
-    height: 100vh; 
-   
-    }
+@media screen and (min-width: 960px) {
+    .navbar-custum {
+        margin-bottom: 10em;
+    }  
+} 
+
 
 .title-homepage {
 
-    margin: auto; 
-    color: white;
-    text-align: center; 
+    color: rgba($color: #09460e, $alpha: 1.0);
     font-weight: bold;
-    margin: 2em 50vw;
-   
-
-   h1 {  
-   
-        font-size: 6em;
-      
+    
+  
+    h1 {
+        font-size: 6.5em;  
     }
 }
 
-@media screen and (min-width: $break-extraLarge) {
-    .backgound-container  {
-     background-image: url("../image/notebook.jpg");
-     background-size: cover;
-    
-     }
-}
+
