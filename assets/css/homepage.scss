@@ -1,25 +1,45 @@
 
+$break-small: 576px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-extraLarge: 1200px;
 
- .navbar-custum {
-    margin-bottom: 100em;
+
+header {
+
+    margin-bottom: 20em;
+
 }  
 
-@media screen and (min-width: 960px) {
-    .navbar-custum {
-        margin-bottom: 10em;
-    }  
-} 
 
 
 .title-homepage {
 
     color: rgba($color: #09460e, $alpha: 1.0);
     font-weight: bold;
-    
+    background-color: #e8edcd; 
+   
   
-    h1 {
-        font-size: 6.5em;  
-    }
+   
+    
 }
 
+.title-homepage h1 {
+  
+    font-size: 1.2em;  
+    text-align: center;  
+    
 
+    @media only screen and (min-width: $break-small) {
+     
+        font-size: 2em;     
+       
+    }
+
+    @media only screen and (min-width: $break-medium) {
+     
+        font-size: 4em;     
+       
+    }
+
+}
