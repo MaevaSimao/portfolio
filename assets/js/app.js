@@ -20,12 +20,13 @@ var app = {
     init:function() {
         
         console.log('init');
-
+        new Homepage(); 
     }
 }
+
 
 $(app.init);
 
 
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+
 
