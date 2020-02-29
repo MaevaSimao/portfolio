@@ -11,23 +11,22 @@ header {
 
 }  
 
-
-
 .title-homepage {
 
     color: rgba($color: #09460e, $alpha: 1.0);
     font-weight: bold;
     background-color: #e8edcd; 
-   
   
+
    
-    
 }
 
 .title-homepage h1 {
   
     font-size: 1.2em;  
     text-align: center;  
+
+    
     
 
     @media only screen and (min-width: $break-small) {
@@ -42,4 +41,21 @@ header {
        
     }
 
+}
+
+.button-custum {
+  
+    position: absolute;
+    right: 20%;
+    font-size: 0.5em;
+    padding: 0 2px;
+    background-color: #243636; 
+    color: white;
+
+    @media only screen and (min-width: $break-small) {
+        right: 15%;
+        font-size: 1em;
+        padding: 0 2px;  
+       
+    }
 }
