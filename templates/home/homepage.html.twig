@@ -19,7 +19,11 @@
         <button type="button" class="btn btn-light button-custum">Parcourir les éléments</button>   
     </div>
 
+{% endblock %}
 
-
-
+{% block javascripts %}
+{{ parent() }}
+{{ encore_entry_script_tags('homepage') }}
+    
+     
 {% endblock %}

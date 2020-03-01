@@ -116,3 +116,22 @@ Button "parcourir les éléments"
         right: 40%;  
     }
 }
+
+/******
+Animation cursor
+*******/
+.animation-cursor {
+  
+    animation-duration: 5s; 
+   animation-name: flash;  
+
+   @keyframes flash {
+    from {
+      cursor: pointer;
+    }
+  
+    to {
+      cursor: none;
+    }
+  }
+}
