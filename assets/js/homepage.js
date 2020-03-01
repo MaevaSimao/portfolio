@@ -12,7 +12,7 @@ var homepage = {
     init:function() { 
         console.log('init homepage');
 
-        $(".button-custum").click(function(){
+        $(".button-custum").on("click", function(evt){
             homepage.travel(); 
         }); 
         
@@ -37,8 +37,12 @@ var homepage = {
     },
 
     flashBreakSmall:function() {
-     $("#button-animation").addClass('.animation-cursor'); 
-     console.log("ok")
+     
+        $('#button-animation').fadeIn("slow", function(){
+            
+        });
+
+        console.log("ok")
     }
 
 }
