@@ -120,18 +120,7 @@ Button "parcourir les éléments"
 /******
 Animation cursor
 *******/
-.animation-buttonDiv {
+.button-color {
   
-    animation-duration: 5s; 
-    animation-name: flash;  
-
-   @keyframes flash {
-    from {
-      background-color: red;
-    }
-  
-    to {
-      background-color: green; 
-    }
+    $background-color: red; 
   }
-}
