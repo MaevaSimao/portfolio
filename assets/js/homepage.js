@@ -6,8 +6,6 @@ var homepage = {
     // property for matchMedia min-width:992px
     breakLarge: window.matchMedia("(min-width: 992px)"),
 
-    flashInterval: '', 
-
     /**
      * init homepage
      */
@@ -33,9 +31,10 @@ var homepage = {
 
         // < 992 px
         else {
-
-
-        homepage.flashInterval = this.flashBreakSmall(); 
+            
+        $('#button-animation').before('<p>Paragraphe précédent</p>');
+        
+        homepage.flashBreakSmall(); 
          
             
         }
@@ -47,15 +46,23 @@ var homepage = {
     
     flashBreakSmall:function() {
      
-      
-       $( '#button-animation' ).css( "background-color", "red" ).fadeOut(900).delay(300).fadeIn(800); 
-       return homepage.flashInterval; 
-        
-      
-        console.log("ok")
-    },
 
+       
+
+        $( '#button-animation' ).fadeOut(700).delay(300).fadeIn(200); 
+
+        setInterval(this.flashBreakSmall, 1000)
+
+        
+     }
     
+
+   
+
+
+       
+
+   
     
    
     
