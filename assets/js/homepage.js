@@ -41,9 +41,15 @@ var homepage = {
             console.log('match-small'); 
             
             this.cursorMobile.css({"display":"block", "position":"absolute", "top":"1.5em"});
+
             $('#button-animation').append(this.cursorMobile); 
 
+            $(".mobile-text").css({"cssText": "display: block! important"});
+       
+
             homepage.cursorAnimationMobile();    
+
+          ; 
         }
     },
 
