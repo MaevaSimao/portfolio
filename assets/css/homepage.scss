@@ -160,8 +160,15 @@ Cursor for Destok
     flex-direction: column; 
     justify-content: center;
 
-    .mobile-text-header {
-        
+    .mobile-text-p {
+ 
         margin: 0; 
     }
+
+    .mobile-text-a {
+     
+        display: none;
+    }
+
+    
 }
