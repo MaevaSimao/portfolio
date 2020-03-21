@@ -11,28 +11,27 @@ var homepage = {
     // property for matchMedia min-width:992px
     breakLarge: window.matchMedia("(min-width: 992px)"),
 
+    // property for cursor pointer
+    cursorMobile: $(".cursorPointer"), 
 
     /**
      * init homepage
      */
     init:function() { 
         console.log('init homepage');
-
-       
-
-        $(".button-custum").on("click", function(){
-           
-            homepage.travel(); 
-        }); 
-        
+ 
+        // click btn tutoriel
+        $(document).ready(function(){
+            $(".button-custum").on("click", function(){
+                homepage.travelHeader(); 
+            }); 
+        });
     },
 
     /**
-     * click() btn "parcourir les élements"
+     * click() btn "Tutoriel"
      */
-    travel:function() {
-
-
+    travelHeader:function() {
 
         // >= 992px 
         if (homepage.breakLarge.matches) { 
@@ -41,25 +40,22 @@ var homepage = {
         else {
             console.log('match-small'); 
             
-            homepage.cursorAnimation()
-          
-          
+            this.cursorMobile.css({"display":"block", "position":"absolute", "top":"1.5em"});
+            $('#button-animation').append(this.cursorMobile); 
+
+            homepage.cursorAnimationMobile();    
         }
-
-
-        console.log('travel')
     },
 
-    cursorAnimation:function() {
+    cursorAnimationMobile:function() {
         
-        let cursor = $(".arrow").css({"display":"block", "position":"absolute"})
-        $('#button-animation').append(cursor); 
+        this.cursorMobile.animate({top: '2em'}, "slow"); 
+        this.cursorMobile.animate({top: '1.5em'}, "slow");
 
-        cursor.fadeOut(100).delay(600).fadeIn(800); 
-
-          $(document).ready(function(){ 
-            setInterval( homepage.cursorAnimation() ,2200); 
+        $(document).ready(function(){ 
+            setInterval( homepage.cursorAnimationMobile() ,2200); 
         });
+    
     }, 
 
    

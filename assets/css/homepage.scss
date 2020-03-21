@@ -117,6 +117,22 @@ Button "parcourir les éléments"
     }
 }
 
+/******
+Cursor for Mobile
+*******/
+.cursorPointer {
+
+    display: none; 
+
+    img {
+        width: 1.2em; 
+        height: 1.2em;  
+    }  
+}
+
+/******
+Cursor for Destok 
+*******/
 .arrow {
 
     display: none; 
@@ -125,4 +141,27 @@ Button "parcourir les éléments"
         width: 1.2em; 
         height: 1.2em;  
     }  
+}
+
+.mobile-text {
+
+    display: none; 
+
+    background-color: white; 
+    width: 90%; 
+    margin: auto;
+    margin-top: 2em; 
+    padding: 0.5em; 
+    border-radius: 5%;
+
+    text-align: center; 
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+
+    .mobile-text-header {
+        
+        margin: 0; 
+    }
 }
