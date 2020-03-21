@@ -12,9 +12,9 @@ import '../css/app.scss';
 
 var $ = require('jquery'); 
 
-// Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-//import $ from 'jquery';
+
 require('../images/cursor.png'); 
+require('../images/cursorMobile.png'); 
 
 var app = {
 

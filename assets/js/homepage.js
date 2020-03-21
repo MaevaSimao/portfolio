@@ -55,7 +55,7 @@ var homepage = {
         let cursor = $(".arrow").css({"display":"block", "position":"absolute"})
         $('#button-animation').append(cursor); 
 
-        cursor.fadeOut(200).delay(300).fadeIn(800); 
+        cursor.fadeOut(100).delay(600).fadeIn(800); 
 
           $(document).ready(function(){ 
             setInterval( homepage.cursorAnimation() ,2200); 
