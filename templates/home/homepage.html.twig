@@ -15,23 +15,13 @@
         <div class="container">
             <h1>Bienvenue sur mon Portfolio</h1>   
         </div>    
-        
-        <button type="button" class="btn btn-light button-custum">Tutoriel</button>   
+     
     </div>
 
-    <div class="cursorPointer">
-        <img src="{{ asset('build/images/cursorMobile.png') }}" alt="cursor pointer">
-    </div>
-
-    <div class="arrow">
-        <img src="{{ asset('build/images/cursor.png') }}" alt="cursor">
-    </div>
+    
 
 {% endblock %}
 
-{% block javascripts %}
-{{ parent() }}
-{{ encore_entry_script_tags('homepage') }}
+
     
      
-{% endblock %}

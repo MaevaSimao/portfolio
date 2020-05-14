@@ -13,8 +13,8 @@ import '../css/app.scss';
 var $ = require('jquery'); 
 
 
-require('../images/cursor.png'); 
-require('../images/cursorMobile.png'); 
+
+require('../images/typewriter.jpg'); 
 
 var app = {
 
@@ -22,6 +22,33 @@ var app = {
         
         console.log('init');
 
+        app.toggleNavBar(); 
+        
+          
+    }, 
+
+    toggleNavBar:function() {
+
+        let $menuBurger = $('<div>'); 
+
+        var $buttonToggle = $('<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"></a>').html($menuBurger);
+       
+        $buttonToggle.prependTo('#toggle-navbar');
+
+        $buttonToggle.click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            app.toggleSidebar(); 
+        });
+    }, 
+
+    toggleSidebar:function() {
+        let $toggle = $('#menu-toggle'); 
+        $toggle.appendTo('#home-sidebar'); 
+        $toggle.html("&#x274C;"); 
+        $toggle.click(function(e) {
+            app.toggleNavBar(); 
+        })
     }
 }
 

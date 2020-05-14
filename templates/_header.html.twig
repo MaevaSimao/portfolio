@@ -1,71 +1,105 @@
+<header>
 
-    <header>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar-wrapper -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+
+                <li id="home-sidebar" class="sidebar-brand d-flex justify-content-around align-items-center">
+                    <a href="#">
+                        Maéva Simao
+                    </a>
+                </li>
+
+                <!--link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Compétences</a>
+                </li>
+
+                <!-- dropdown-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Expériences
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Expériences professionnelles</a>
+                        <a class="dropdown-item" href="#">Formation</a>
+                    </div>
+                </li>
+
+                <!--link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projets</a>
+                </li>
+
+                <!--link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Parcours</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+     
+    
+   <!-- NAVBAR -->
+    <nav  class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div id="toggle-navbar">
+            
+            <a id="home-navbar" class="navbar-brand" href="#">Maéva Simao</a>  
+        </div>
+        
+
+
+
         <!-- 
-        NAVBAR
-        -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-            <!-- 
-            NAVBAR BRAND
-            -->
-            <a class="navbar-brand" href="#">Maéva Simao</a>
-            <!-- button-->
-            <button class="navbar-toggler button-header" type="button" data-toggle="collapse" data-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="button-animation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- 
             NAVBAR COLLAPSE
             -->
-            <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
-                <ul class="navbar-nav ">
+        <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
+            <ul class="navbar-nav ">
 
-                    <!--link -->
-                    <li class="nav-item ">
-                        <a class="nav-link cursor-acceuil" href="#">Accueil</a>
-                    </li>
 
-                    <!--link -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Compétences</a>
-                    </li>
-                
-                    <!-- dropdown-->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Expériences
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Expériences professionnelles</a>
-                            <a class="dropdown-item" href="#">Formation</a>
-                            <a class="dropdown-item" href="#">Tout</a>
-                        </div>
-                    </li>
+                <!--link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Compétences</a>
+                </li>
 
-                    <!--link -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Projets</a>
-                    </li>
+                <!-- dropdown-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Expériences
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Expériences professionnelles</a>
+                        <a class="dropdown-item" href="#">Formation</a>
+                    </div>
+                </li>
 
-                     <!--link -->
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">A propos</a>
-                    </li>
+                <!--link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projets</a>
+                </li>
 
-                     <!--link -->
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sources</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                <!--link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Parcours</a>
+                </li>
 
-        <!-- Text show in Mobile -->
-        <div class="mobile-text">
-            <p class="mobile-text-p">Cliquez ici pour afficher le menu</p>
-            <a href="{{ path('homepage')}}" class="mobile-text-a">Suivant</a>
+            </ul>
         </div>
-    
-    </header>
+
+
+    </nav>
+
+
+
+</header>
