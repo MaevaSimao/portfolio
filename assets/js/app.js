@@ -12,11 +12,13 @@ import '../css/app.scss';
 
 var $ = require('jquery'); 
 
-
-
 require('../images/typewriter.jpg'); 
 
+
+
 var app = {
+
+$menuBurger: $('.divBurger'), 
 
     init:function() {
         
@@ -29,10 +31,9 @@ var app = {
 
     toggleNavBar:function() {
 
-        let $menuBurger = $('<div>'); 
 
-        var $buttonToggle = $('<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"></a>').html($menuBurger);
-       
+        var $buttonToggle = $('<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"></a>').html(app.$menuBurger);
+        
         $buttonToggle.prependTo('#toggle-navbar');
 
         $buttonToggle.click(function(e) {
@@ -43,10 +44,13 @@ var app = {
     }, 
 
     toggleSidebar:function() {
+
         let $toggle = $('#menu-toggle'); 
         $toggle.appendTo('#home-sidebar'); 
         $toggle.html("&#x274C;"); 
-        $toggle.click(function(e) {
+      
+        $toggle.click(function(e) { 
+            $toggle.remove(); 
             app.toggleNavBar(); 
         })
     }
