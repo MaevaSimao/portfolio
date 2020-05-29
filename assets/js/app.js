@@ -18,7 +18,7 @@ var app = {
     {    
         console.log('init');
 
-        var mql = window.matchMedia("(max-width: 768px)")
+        var mql = window.matchMedia("(max-width: 991.98px)")
 
         // call listener function explicitly at run time
         mediaqueryresponse(mql) 
@@ -52,7 +52,7 @@ var app = {
     {
 
         /* (1) */
-        var $buttonToggle = $('<a href="#menu-toggle" class="btn" id="menu-toggle"></a>').html(app.$menuBurger);
+        var $buttonToggle = $('<a href="#menu-toggle" class="btn menu-burger" id="menu-toggle"></a>').html(app.$menuBurger);
 
         $buttonToggle.prependTo('#toggle-navbar');
 
@@ -61,6 +61,7 @@ var app = {
         {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
+            $buttonToggle.removeClass(); 
             app.toggleSidebar(); 
         });
     }, 
@@ -75,8 +76,8 @@ var app = {
     {
 
         /* (1) */
-        let $toggle = $('#menu-toggle'); 
-        $toggle.appendTo('#home-sidebar'); 
+        let $toggle = $('#menu-toggle').addClass('sidebar-cross'); 
+        $toggle.prependTo('#home-sidebar'); 
         $toggle.html("&#x274C;"); 
       
         /* (2) */

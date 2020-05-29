@@ -46,7 +46,7 @@ Toggle Styles
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
+    background: #f8f9fa;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -82,27 +82,29 @@ Sidebar Styles
     margin: 0;
     padding: 0;
     list-style: none;
+
+    li 
+    {
+        text-indent: 20px;
+        line-height: 40px; 
+       
+
+        a 
+        {
+            display: block;
+            text-decoration: none;
+            color: #725436;
+            font-size: 1.2em;
+           
+            
+        }
+
+    }
+
+    
+   
 }
 
-.sidebar-nav li
-{
-    text-indent: 20px;
-    line-height: 40px;
-}
-
-.sidebar-nav li a 
-{
-    display: block;
-    text-decoration: none;
-    color: #999999;
-}
-
-.sidebar-nav li a:hover
-{
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-}
 
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus 
@@ -115,53 +117,73 @@ Sidebar Styles
     height: 65px;
     font-size: 18px;
     line-height: 60px;
-}
+   
 
-.sidebar-nav > .sidebar-brand a 
-{
-    color: #999999;
+    a 
+    {
+       color: #58412b; 
+    }
 }
-
-.sidebar-nav > .sidebar-brand a:hover 
-{
-    color: #fff;
-    background: none;
-}
-
 
 
 /** 
 menu-toggle (that open and close sidebar)
 Here : Menu Burger in the navbar 
 **/
-#menu-toggle 
+.menu-burger 
 {
-    border: 1px solid black; 
+  
     padding: 0 7px; 
     
     /* All div in the Burger */
     .divBurger
     {
-        width: 25px;
-        height: 2px;
+        
         background-color: black;
+        height: 2px;
          
     }
 
     .burger-top 
     {
+        width: 25px;
         margin-top: 8px;
     }
 
     .burger-middle 
     {
-        margin-top: 2px;
+        width: 20px;
+        margin: auto; 
+        margin-top: 4px;
+        
     }
 
     .burger-bottom 
     {
-        margin-top: 2px;
+        width: 25px;
+        margin-top: 4px;
         margin-bottom: 8px; 
     }
         
+}
+
+
+/** 
+menu-toggle (that open and close sidebar)
+Here : Cross in the sidebar
+**/
+.sidebar-cross 
+{
+    align-self: flex-end;
+    padding: 1em 2em; 
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em; 
+     
+}
+
+.sidebar-cross:hover 
+{
+    text-decoration: none;
+    color: black;
 }
