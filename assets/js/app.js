@@ -1,13 +1,5 @@
-/*
- * Welcome to your app's main JavaScript file!
- *
- * We recommend including the built version of this JavaScript file
- * (and its CSS file) in your base layout (base.html.twig).
- */
 
 
-
-// any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.scss';
 
 var $ = require('jquery'); 
@@ -15,44 +7,98 @@ var $ = require('jquery');
 require('../images/typewriter.jpg'); 
 
 
-
 var app = {
 
-$menuBurger: $('.divBurger'), 
 
-    init:function() {
-        
+    $menuBurger: $('.divBurger'), 
+
+
+    /* init */
+    init:function() 
+    {    
         console.log('init');
 
-        app.toggleNavBar(); 
-        
-          
+        var mql = window.matchMedia("(max-width: 768px)")
+
+        // call listener function explicitly at run time
+        mediaqueryresponse(mql) 
+
+        // attach listener function to listen in on state changes
+        mql.addListener(mediaqueryresponse) 
+
+        function mediaqueryresponse(mql)
+        {
+            
+            /* if media query matches */
+            if (mql.matches)
+            { 
+                app.toggleNavBar(); 
+            } 
+            else 
+            {
+                app.deleteToggle();
+            }
+        }
     }, 
 
-    toggleNavBar:function() {
 
 
-        var $buttonToggle = $('<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"></a>').html(app.$menuBurger);
-        
+    /* 
+    toggleNavBar()
+    Display Menu Burger (1) 
+    and open sidebar when user clicks on it (2)
+    */
+    toggleNavBar:function() 
+    {
+
+        /* (1) */
+        var $buttonToggle = $('<a href="#menu-toggle" class="btn" id="menu-toggle"></a>').html(app.$menuBurger);
+
         $buttonToggle.prependTo('#toggle-navbar');
 
-        $buttonToggle.click(function(e) {
+        /* (2) */
+        $buttonToggle.click(function(e) 
+        {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
             app.toggleSidebar(); 
         });
     }, 
 
-    toggleSidebar:function() {
 
+    /* 
+    toggleSidebar()
+    Move #menu-toggle in the sidebar and change html to an icon(1) 
+    and remove #menu-toggle and close sidebar when user clicks on it (2)
+    */
+    toggleSidebar:function() 
+    {
+
+        /* (1) */
         let $toggle = $('#menu-toggle'); 
         $toggle.appendTo('#home-sidebar'); 
         $toggle.html("&#x274C;"); 
       
+        /* (2) */
         $toggle.click(function(e) { 
             $toggle.remove(); 
             app.toggleNavBar(); 
         })
+    }, 
+
+
+
+    /* 
+    deleteToggle()
+    Remove menu-burger, 
+    toggle, 
+    and class "toggled" (if the sidebar has oppen)
+    */
+    deleteToggle:function()
+    {
+        app.$menuBurger.remove(); 
+        $('#menu-toggle').remove();
+        $('#wrapper').removeClass();    
     }
 }
 
