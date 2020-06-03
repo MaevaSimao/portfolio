@@ -18,13 +18,24 @@ var app = {
     {    
         console.log('init');
 
-        var mql = window.matchMedia("(max-width: 991.98px)")
+        var mql = window.matchMedia("(max-width: 991.98px)"); 
+
+
+        $(document).ready(function() 
+        {
+            $("#options.dropdown").click(function() 
+            {
+                $("ul.sub_menu").slideToggle(150);
+                app.dropdownToggle();
+                
+            });  
+        });
 
         // call listener function explicitly at run time
-        mediaqueryresponse(mql) 
+        mediaqueryresponse(mql);
 
         // attach listener function to listen in on state changes
-        mql.addListener(mediaqueryresponse) 
+        mql.addListener(mediaqueryresponse); 
 
         function mediaqueryresponse(mql)
         {
@@ -100,6 +111,31 @@ var app = {
         app.$menuBurger.remove(); 
         $('#menu-toggle').remove();
         $('#wrapper').removeClass();    
+    }, 
+
+
+    dropdownToggle:function() 
+    {
+     
+        $('.item-down').addClass('d-none'); 
+
+        $("#options.dropdown").click(function() 
+        { 
+           
+            app.dropdownToggleSecond()
+                 
+        });  
+    }, 
+
+    dropdownToggleSecond:function() 
+    {
+        $('.item-down').removeClass('d-none');
+        
+        $("#options.dropdown").click(function() 
+        {
+            app.dropdownToggle()
+                 
+        }); 
     }
 }
 

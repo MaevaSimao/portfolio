@@ -23,6 +23,7 @@ body {
 /*****************
 Toggle Styles 
 *****************/
+
 #wrapper 
 {
     padding-left: 0;
@@ -58,18 +59,64 @@ Toggle Styles
     width: 250px;
 }
 
-#page-content-wrapper 
+ 
+
+/***********************************
+Dropdown "Expériences"
+************************************/
+
+.title 
 {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
+    font-size: 1.2em; 
+    position: relative;   
 }
 
-#wrapper.toggled #page-content-wrapper 
+#options.dropdown 
 {
-    position: absolute;
-    margin-right: -250px;
+	
+    display: block;
+	cursor: pointer;
+    position: relative;
+    
+    ul 
+    {
+        display: none;
+	    list-style: none;
+        position: absolute;
+        padding-left: 1em; 
+    
+    }
 }
+
+#options.dropdown ul .nav-item-block
+{
+    padding-left: 1em;
+
+    a
+    {
+        font-size: 1em; 
+    }
+}
+
+#options.dropdown ul li 
+{
+      font-size: 1em; 
+      
+    
+
+    a 
+    {
+        text-decoration: none;
+        padding: 0; 
+        
+    }
+}
+
+
+
+
+
+
 
 /*************
 Sidebar Styles
@@ -85,7 +132,7 @@ Sidebar Styles
 
     li 
     {
-        text-indent: 20px;
+       
         line-height: 40px; 
        
 
@@ -93,16 +140,11 @@ Sidebar Styles
         {
             display: block;
             text-decoration: none;
-            color: #725436;
             font-size: 1.2em;
-           
-            
+                
         }
 
-    }
-
-    
-   
+    }   
 }
 
 
@@ -118,11 +160,17 @@ Sidebar Styles
     font-size: 18px;
     line-height: 60px;
    
-
     a 
     {
-       color: #58412b; 
+        font-family: 'Dancing Script', cursive;
     }
+}
+
+
+/* text color */
+.sidebar-nav li a, .sidebar-nav > .sidebar-brand, .title, #options.dropdown ul li a
+{   
+    color: #58422c;
 }
 
 
@@ -186,4 +234,20 @@ Here : Cross in the sidebar
 {
     text-decoration: none;
     color: black;
+}
+
+
+
+
+.navbar-brand-custum 
+{
+    padding-left: 0.4em; 
+    font-size: 1.4em; 
+    font-family: 'Dancing Script', cursive;
+
+    @media (min-width: 992px) 
+    {
+        padding-left: 1em; 
+        font-size: 1.7em;;
+    }
 }
