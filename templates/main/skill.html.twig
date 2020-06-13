@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio - Compétences{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+{{ encore_entry_link_tags('skill') }}
+{% endblock %}
+
+{% block body %}
+
+    
+<div class="card">
+    <div class="card-body">
+      <img src="{{asset('build/images/PHP-logo.svg.png')}}" alt="php logo" class="php-logo">
+    </div>
+</div> 
+
+    
+
+{% endblock %}
+
+
+    
+     

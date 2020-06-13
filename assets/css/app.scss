@@ -1,7 +1,7 @@
 
-/*********
+/**********************************
 ALL
-*********/
+***********************************/
 html, body {
 
     margin: 0;
@@ -20,9 +20,9 @@ body {
 
 
 
-/*****************
+/*************************************
 Toggle Styles 
-*****************/
+*************************************/
 
 #wrapper 
 {
@@ -61,9 +61,9 @@ Toggle Styles
 
  
 
-/***********************************
-Dropdown "Expériences"
-************************************/
+/****************************************
+Dropdown "Expériences" in sidebar
+****************************************/
 
 .title 
 {
@@ -102,8 +102,6 @@ Dropdown "Expériences"
 {
       font-size: 1em; 
       
-    
-
     a 
     {
         text-decoration: none;
@@ -113,14 +111,11 @@ Dropdown "Expériences"
 }
 
 
-
-
-
-
-
-/*************
+/*****************************************
 Sidebar Styles
-**************/
+******************************************/
+
+/* ul */
 .sidebar-nav 
 {
     position: absolute;
@@ -131,11 +126,9 @@ Sidebar Styles
     list-style: none;
 
     li 
-    {
-       
+    {   
         line-height: 40px; 
        
-
         a 
         {
             display: block;
@@ -167,17 +160,19 @@ Sidebar Styles
 }
 
 
-/* text color */
+/*********************
+ text color 
+ *********************/
 .sidebar-nav li a, .sidebar-nav > .sidebar-brand, .title, #options.dropdown ul li a
 {   
     color: #58422c;
 }
 
 
-/** 
+/***************************************** 
 menu-toggle (that open and close sidebar)
 Here : Menu Burger in the navbar 
-**/
+*****************************************/
 .menu-burger 
 {
   
@@ -216,10 +211,10 @@ Here : Menu Burger in the navbar
 }
 
 
-/** 
+/************************************** 
 menu-toggle (that open and close sidebar)
 Here : Cross in the sidebar
-**/
+***************************************/
 .sidebar-cross 
 {
     align-self: flex-end;
@@ -239,6 +234,9 @@ Here : Cross in the sidebar
 
 
 
+/************************************** 
+Navbar
+***************************************/
 .navbar-brand-custum 
 {
     padding-left: 0.4em; 
@@ -251,3 +249,4 @@ Here : Cross in the sidebar
         font-size: 1.7em;;
     }
 }
+

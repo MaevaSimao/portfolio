@@ -10,7 +10,7 @@
 
                 <!-- title link -->
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href="{{path('homepage')}}">
                         Maéva Simao
                     </a>
                 </li>
@@ -93,31 +93,22 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
         <div id="toggle-navbar">
-            <a id="home-navbar" class="navbar-brand navbar-brand-custum" href="#">Maéva Simao</a>
+            <a id="home-navbar" class="navbar-brand navbar-brand-custum" href="{{path('homepage')}}">Maéva Simao</a>
         </div>
 
-        <!-- 
-        NAVBAR COLLAPSE
-        -->
+        <!-- NAVBAR COLLAPSE -->
         <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
             <ul class="navbar-nav ">
 
 
                 <!--link -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Compétences</a>
+                    <a class="nav-link" href="{{path('skill')}}">Compétences</a>
                 </li>
 
-                <!-- dropdown-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Expériences
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Expériences professionnelles</a>
-                        <a class="dropdown-item" href="#">Formation</a>
-                    </div>
+                 <!--link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Expériences</a>
                 </li>
 
 
@@ -133,10 +124,10 @@
 
             </ul>
         </div>
-
+        <!-- /NAVBAR COLLAPSE -->
 
     </nav>
-
+    <!-- /NAVBAR -->
 
 
 </header>

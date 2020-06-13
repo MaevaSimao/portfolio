@@ -5,6 +5,7 @@ import '../css/app.scss';
 var $ = require('jquery'); 
 
 require('../images/typewriter.jpg'); 
+require('../images/PHP-logo.svg.png');
 
 
 var app = {
