@@ -6,6 +6,7 @@ var $ = require('jquery');
 
 require('../images/typewriter.jpg'); 
 require('../images/PHP-logo.svg.png');
+require('../images/javascript.svg');
 
 
 var app = {

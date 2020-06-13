@@ -9,13 +9,16 @@
 
 {% block body %}
 
-    
-<div class="card">
-    <div class="card-body">
-      <img src="{{asset('build/images/PHP-logo.svg.png')}}" alt="php logo" class="php-logo">
+ {% for skill in skills %}    
+<div class="card card-custum ">
+
+    <h2>{{skill.name}}</h2>
+    <div class="card-body row">
+       <img src="{{ asset("build/images/" ~ skill.image ) }}" alt="php logo" class="logo col-6">
+       <p class="col-6"> {{skill.text}}</p>
     </div>
 </div> 
-
+{% endfor %}
     
 
 {% endblock %}
