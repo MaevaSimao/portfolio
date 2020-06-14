@@ -5,8 +5,28 @@ import '../css/app.scss';
 var $ = require('jquery'); 
 
 require('../images/typewriter.jpg'); 
-require('../images/PHP-logo.svg.png');
-require('../images/javascript.svg');
+require('../images/php-logo.svg.jpg');
+require('../images/javascript-logo.jpg');
+require('../images/apache-logo.jpg');
+require('../images/bootstrap-logo.jpg');
+require('../images/css-logo.jpg');
+require('../images/debian-logo.jpg');
+require('../images/github-logo.jpg');
+require('../images/html-logo.jpg');
+require('../images/jquery-logo.jpg');
+require('../images/linkedin-logo.jpg');
+require('../images/linuxMint-logo.jpg');
+require('../images/lumen-logo.jpg');
+require('../images/mysql-logo.jpg');
+require('../images/ovh-logo.jpg');
+require('../images/photoshop-logo.jpg');
+require('../images/phpMyAdmin-logo.jpg');
+require('../images/symfony-logo.jpg');
+require('../images/webpack-logo.jpg');
+require('../images/wordpress-logo.jpg');
+require('../images/workbench-logo.jpg');
+
+
 
 
 var app = {
