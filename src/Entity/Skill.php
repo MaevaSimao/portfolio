@@ -17,7 +17,7 @@ class Skill
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=80, nullable=true)
+     * @ORM\Column(type="string", length=80)
      */
     private $name;
 
@@ -27,9 +27,19 @@ class Skill
     private $image;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
-    private $text;
+    private $level;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $CreatedAt;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $UpdatedAt;
 
     public function getId(): ?int
     {
@@ -41,7 +51,7 @@ class Skill
         return $this->name;
     }
 
-    public function setName(?string $name): self
+    public function setName(string $name): self
     {
         $this->name = $name;
 
@@ -60,14 +70,46 @@ class Skill
         return $this;
     }
 
-    public function getText(): ?string
+    public function getLevel(): ?string
     {
-        return $this->text;
+        return $this->level;
     }
 
-    public function setText(?string $text): self
+    public function setLevel(?string $level): self
     {
-        $this->text = $text;
+        $this->level = $level;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->UpdatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $UpdatedAt): self
+    {
+        $this->UpdatedAt = $UpdatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of CreatedAt
+     */ 
+    public function getCreatedAt()
+    {
+        return $this->CreatedAt;
+    }
+
+    /**
+     * Set the value of CreatedAt
+     *
+     * @return  self
+     */ 
+    public function setCreatedAt($CreatedAt)
+    {
+        $this->CreatedAt = $CreatedAt;
 
         return $this;
     }
